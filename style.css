@@ -1,0 +1,75 @@
+*,
+* + * {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	margin: 2rem 0;
+	display: grid;
+	place-items: center;
+	background-image: linear-gradient(-45deg, #1b1811, #222);
+}
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.outer {
+	display: flex;
+	flex-shrink: 0;
+	height: calc(200px + 4vw);
+	width: calc(200px + 4vw);
+	background-image: linear-gradient(
+		to bottom right,
+		#0b3d91 40%,
+		#fff,
+		#fc3d21 50%
+	);
+}
+
+.inner {
+	height: calc(190px + 4vw);
+	width: calc(190px + 4vw);
+	background: url(https://assets.codepen.io/4787486/space-shuttle-launch.jpg)
+		no-repeat center;
+	background-size: cover;
+	margin: auto;
+}
+
+.inset {
+	clip-path: inset(0% 0% 0% 0% round 5%);
+}
+
+.circle {
+	clip-path: circle(50%);
+}
+
+.ellipse {
+	clip-path: ellipse(35% 50% at 50% 50%);
+}
+
+.octagon {
+	clip-path: polygon(
+		30% 0%,
+		70% 0%,
+		100% 30%,
+		100% 70%,
+		70% 100%,
+		30% 100%,
+		0% 70%,
+		0% 30%
+	);
+}
+
+.hover {
+	transition: 0.5s ease;
+}
+.hover:hover {
+	height: calc(200px + 4vw);
+	width: calc(200px + 4vw);
+}
